@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/hashicorp/go-getter/helper/url"
+	"github.com/uded/go-getter/helper/url"
 )
 
 // Detector defines the interface that an invalid URL or a URL with a blank
@@ -22,11 +22,6 @@ var Detectors []Detector
 
 func init() {
 	Detectors = []Detector{
-		new(GitHubDetector),
-		new(GitDetector),
-		new(BitBucketDetector),
-		new(S3Detector),
-		new(GCSDetector),
 		new(FileDetector),
 	}
 }
